@@ -1,0 +1,50 @@
+# Local datasets and generated experiment outputs
+data/
+results/
+
+# Python caches and test/build artifacts
+__pycache__/
+*.py[cod]
+*.pyo
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+build/
+dist/
+*.egg-info/
+
+# Virtual environments
+.venv/
+venv/
+env/
+.env
+.env.*
+
+# Logs and runtime output
+*.log
+run.log
+logs/
+
+# Large model/data artifacts
+*.pt
+*.pth
+*.pth.tar
+*.ckpt
+*.tfrecord
+*.h5
+*.hdf5
+*.npz
+*.npy
+*.tar
+*.tar.gz
+*.tgz
+*.zip
+*.7z
+
+# Editor and OS files
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
