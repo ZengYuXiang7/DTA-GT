@@ -1,5 +1,3 @@
-# https://blog.csdn.net/jokerxsy/article/details/109733852
-
 import numpy as np
 import torch
 from torch.utils.data import Sampler

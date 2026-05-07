@@ -1,4 +1,3 @@
-# Copyright 2019 The Google Research Authors.
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -100,8 +99,7 @@ def build_model_fn(spec, config, num_train_images):
 
     if mode == tf.estimator.ModeKeys.PREDICT and not config['use_tpu']:
       # It is a known limitation of Estimator that the labels
-      # are not passed during PREDICT mode when running on CPU/GPU
-      # (https://github.com/tensorflow/tensorflow/issues/17824), thus we cannot
+      # are not passed during PREDICT mode when running on CPU/GPU, thus we cannot
       # compute the loss or anything dependent on it (i.e., the gradients).
       loss = tf.constant(0.0)
     else:
@@ -458,4 +456,3 @@ def _covariance_matrix(activations):
   cov = squared / (tf.cast(tf.shape(flattened)[1], tf.float32) - 1)
 
   return cov
-

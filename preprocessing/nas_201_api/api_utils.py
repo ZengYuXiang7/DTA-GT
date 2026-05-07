@@ -1,5 +1,3 @@
-#####################################################
-# Copyright (c) Xuanyi Dong [GitHub D-X-Y], 2019.08 #
 ############################################################################################
 # NAS-Bench-201: Extending the Scope of Reproducible Neural Architecture Search, ICLR 2020 #
 ############################################################################################
@@ -575,7 +573,6 @@ class ArchResults(object):
 """
 This class (ResultsCount) is used to save the information of one trial for a single architecture.
 I did not write much comment for this class, because it is the lowest-level class in NAS-Bench-201 API, which will be rarely called.
-If you have any question regarding this class, please open an issue or email me.
 """
 class ResultsCount(object):
 

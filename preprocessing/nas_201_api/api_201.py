@@ -1,13 +1,9 @@
-#####################################################
-# Copyright (c) Xuanyi Dong [GitHub D-X-Y], 2019.08 #
 ############################################################################################
 # NAS-Bench-201: Extending the Scope of Reproducible Neural Architecture Search, ICLR 2020 #
 ############################################################################################
 # The history of benchmark files:
 # [2020.02.25] NAS-Bench-201-v1_0-e61699.pth : 6219 architectures are trained once, 1621 architectures are trained twice, 7785 architectures are trained three times. `LESS` only supports CIFAR10-VALID.
 # [2020.03.16] NAS-Bench-201-v1_1-096897.pth : 2225 architectures are trained once, 5439 archiitectures are trained twice, 7961 architectures are trained three times on all training sets. For the hyper-parameters with the total epochs of 12, each model is trained on CIFAR-10, CIFAR-100, ImageNet16-120 once, and is trained on CIFAR-10-VALID twice.
-#
-# I'm still actively enhancing this benchmark, while it is now maintained at https://github.com/D-X-Y/NATS-Bench
 #
 import os, copy, random, torch, numpy as np
 from pathlib import Path
@@ -244,7 +240,7 @@ class NASBench201API(NASBenchMetaAPI):
       arch_str: the input is a string indicates the architecture topology, such as
                     |nor_conv_1x1~0|+|none~0|none~1|+|none~0|none~1|skip_connect~2|
       search_space: a list of operation string, the default list is the search space for NAS-Bench-201
-        the default value should be be consistent with this line https://github.com/D-X-Y/AutoDL-Projects/blob/master/lib/models/cell_operations.py#L24
+        the default value should be consistent with the reference operation list.
     :return
       the numpy matrix (2-D np.ndarray) representing the DAG of this architecture topology
     :usage
@@ -271,4 +267,3 @@ class NASBench201API(NASBenchMetaAPI):
         op_idx, node_idx = search_space.index(op), int(idx)
         matrix[i+1, node_idx] = op_idx
     return matrix
-

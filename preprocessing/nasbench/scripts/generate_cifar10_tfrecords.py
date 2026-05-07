@@ -1,4 +1,3 @@
-# Copyright 2019 The Google Research Authors.
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -15,11 +14,9 @@
 """Read CIFAR-10 data from pickled numpy arrays and writes TFRecords.
 
 Generates tf.train.Example protos and writes them to TFRecord files from the
-python version of the CIFAR-10 dataset downloaded from
-https://www.cs.toronto.edu/~kriz/cifar.html.
+python version of the CIFAR-10 dataset archive.
 
-Based on script from
-https://github.com/tensorflow/models/blob/master/tutorials/image/cifar10_estimator/generate_cifar10_tfrecords.py
+Based on the standard CIFAR-10 TFRecord conversion flow.
 
 To run:
   python generate_cifar10_tfrecords.py --data_dir=/tmp/cifar-tfrecord

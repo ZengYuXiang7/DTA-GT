@@ -1,7 +1,6 @@
 // Metrics stored per evaluation of each ModelSpec.
 // NOTE: this file is for reference only, changes to this file will not affect
-// the code unless you compile the proto using protoc, which can be installed
-// from https://github.com/protocolbuffers/protobuf/releases.
+// the code unless you compile the proto using protoc.
 syntax = "proto2";
 
 package nasbench;
@@ -51,5 +50,4 @@ message EvaluationData {
   // to store in file, so they need to be queried along with the checkpoints
   // from GCS directly.
 }
-
 

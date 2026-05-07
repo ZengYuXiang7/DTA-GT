@@ -1,4 +1,3 @@
-# Copyright 2019 The Google Research Authors.
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -31,12 +30,10 @@ for V in [2, ..., MAX_VERTICES]:    # V includes input and output vertices
       if graph hash has not been seen before:
         output graph (adjacency matrix + labeling)
 
-This script uses a modification on Weisfeiler-Lehman color refinement
-(https://ist.ac.at/mfcs13/slides/gi.pdf) for graph hashing, which is very
-loosely similar to the hashing approach described in
-https://arxiv.org/pdf/1606.00001.pdf. The general idea is to assign each vertex
-a hash based on the in-degree, out-degree, and operation label then iteratively
-hash each vertex with the hashes of its neighbors.
+This script uses a modification on Weisfeiler-Lehman color refinement for graph
+hashing. The general idea is to assign each vertex a hash based on the
+in-degree, out-degree, and operation label then iteratively hash each vertex
+with the hashes of its neighbors.
 
 In more detail, the iterative update involves repeating the following steps a
 number of times greater than or equal to the diameter of the graph:
