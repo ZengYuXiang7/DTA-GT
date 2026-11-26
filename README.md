@@ -6,7 +6,7 @@ This is the official PyTorch implementation of the paper **"DTA-GT: Direction- a
 
 ## Code Update
 
-I am currently undergoing surgery and preparing the camera-ready version of our paper. Code updates are planned for after November 2026. Thank you for your patience and understanding!
+I am currently undergoing surgery and preparing the camera-ready version of our paper. Code updates are planned for January 2027. Thank you for your patience and understanding!
 
 ## Abstract
 
